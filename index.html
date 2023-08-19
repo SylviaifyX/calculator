@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,100;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>Age Calculator</title>
+</head>
+
+<body>
+
+    <div class="bodyContainer">
+        <div class="itemContainer">
+            <form action="" required>
+                <div class="day">
+                    <div class="label">
+                        <label for="">Day</label>
+                    </div>
+                    <input type="number" id="day" name="Day" required="required" minlength="1" maxlength="2">
+                    <span id="message"></span>
+                </div>
+                <div class="day">
+                    <div class="label">
+                        <label for="">Month</label>
+                    </div>
+                    <input type="number" id="month" name="Month" required="required" minlength="1" maxlength="2">
+                </div>
+                <div class="day">
+                    <div class="label">
+                        <label for="">Year</label>
+                    </div>
+                    <input type="number" id="year" name="Year" required="required" minlength="4" maxlength="4">
+                </div>
+            </form>
+            <div class="line">
+                <hr />
+                <img src="./images/icon-arrow.svg" alt="" id="active">
+            </div>
+            <div class="resultContainer">
+                <div class="Result">
+                    <p><span id="years_result">- -</span> years</p>
+                </div>
+                <div class="Result">
+                    <p><span id="months_result">- -</span> months</p>
+                </div>
+                <div class="Result">
+                    <p><span id="days_result">- -</span> days</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
