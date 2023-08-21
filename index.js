@@ -29,29 +29,48 @@ function calculateAge(){
     let new_date = new Date();
 
     let User_date = new_date.getDate();
-    let User_month = new_date.getMonth();
+    let User_month = 1 + new_date.getMonth();
     let User_year = new_date.getFullYear();
     let user_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+    /* calculating the age */
+    if (inputDday > User_date){
+        User_date = User_date + user_month[User_month - 1];
+        User_month = User_month - 1;
+    }else{
+        if (inputMonth > User_month){
+            User_month = User_month + 12;
+            User_year = User_year - 1;
+        }
+    }
     let  age = User_date - inputDday;
     let  year = User_year - inputYear;
     let month = User_month - inputMonth;
- 
 
-    if (User_date >= inputDday){
-        User_date = User_date - inputDday;
+    // if (User_date >= inputDday){
+    //     User_date = User_date - inputDday;
 
-    }else{
-        User_date--;
-        User_date = user_month + User_date - inputDday
-    }
+    // }else{
+    //     User_date--;
+    //     User_date = user_month + User_date - inputDday
+    // }
 
-    if(User_month >= inputMonth){
-        User_month = User_month - inputMonth ;
-    }else{
-        User_month--;
-        User_month = 12 + User_month - inputMonth ;
-    }
+    // if(User_month >= inputMonth){
+    //     User_month = User_month - inputMonth ;
+    // }else{
+    //     User_month--;
+    //     User_month = 12 + User_month - inputMonth ;
+    // }
+
+    // if (inputDday.value > User_date){
+    //     let User_date = User_date + user_month[User_month -1];
+    //     let User_month = User_month -1
+    // }else{
+    //     if (inputMonth.value > User_month){
+    //         let User_month = User_month + 12;
+    //         let User_year = User_year - 1;
+    //     }
+    // }
 
     
     Year_result.innerHTML = year;
@@ -64,6 +83,9 @@ function calculateAge(){
         month: month,
     }
    localStorage.setItem("result", JSON.stringify(storage));
+
+   let RetriveDate = JSON.parse(localStorage.getItem("result"))
+   console.log();(RetriveDate);
     
 }
 
