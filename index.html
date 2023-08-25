@@ -19,24 +19,26 @@
     <div class="bodyContainer">
         <div class="itemContainer">
             <form action="" required>
-                <div class="day">
+                <div class="inputField">
                     <div class="label">
                         <label for="">Day</label>
                     </div>
                     <input type="number" id="day" name="Day" required="required" minlength="1" maxlength="2">
-                    <span id="message"></span>
+                    <span class="error" id="errorDaymessage"></span>
                 </div>
-                <div class="day">
+                <div class="inputField">
                     <div class="label">
                         <label for="">Month</label>
                     </div>
                     <input type="number" id="month" name="Month" required="required" minlength="1" maxlength="2">
+                    <span class="error"  id="errorMonthmessage"></span>
                 </div>
-                <div class="day">
+                <div class="inputField">
                     <div class="label">
                         <label for="">Year</label>
                     </div>
                     <input type="number" id="year" name="Year" required="required" minlength="4" maxlength="4">
+                    <span class="error"  id="errorYearmessage"></span>
                 </div>
             </form>
             <div class="line">
